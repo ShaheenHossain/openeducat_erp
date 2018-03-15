@@ -58,8 +58,8 @@ class OpStudent(models.Model):
          ('A-', 'A-ve'), ('B-', 'B-ve'), ('O-', 'O-ve'), ('AB-', 'AB-ve')],
         'Blood Group')
     gender = fields.Selection(
-        [('m', 'Male'), ('f', 'Female'),
-         ('o', 'Other')], 'Gender')
+        [('m', 'Male'), ('f', 'Female')],
+        'Gender')
     nationality = fields.Many2one('res.country', 'Nationality')
     emergency_contact = fields.Many2one(
         'res.partner', 'Emergency Contact')
