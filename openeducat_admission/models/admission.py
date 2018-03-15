@@ -40,7 +40,7 @@ class OpAdmission(models.Model):
         'Middle Name', size=128,
         states={'done': [('readonly', True)]})
     last_name = fields.Char(
-        'Last Name', size=128, required=True,
+        'Last Name', size=128,
         states={'done': [('readonly', True)]})
     title = fields.Many2one(
         'res.partner.title', 'Title', states={'done': [('readonly', True)]})
@@ -74,8 +74,7 @@ class OpAdmission(models.Model):
     mobile = fields.Char(
         'Mobile', size=16, states={'done': [('readonly', True)]})
     email = fields.Char(
-        'Email', size=256, required=True,
-        states={'done': [('readonly', True)]})
+        'Email', size=256, states={'done': [('readonly', True)]})
     city = fields.Char('City', size=64, states={'done': [('readonly', True)]})
     zip = fields.Char('Zip', size=8, states={'done': [('readonly', True)]})
     state_id = fields.Many2one(
